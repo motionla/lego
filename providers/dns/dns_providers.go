@@ -3,7 +3,8 @@ package dns
 import (
 	"fmt"
 
-	"github.com/xenolf/lego/old/acme"
+	"github.com/xenolf/lego/challenge"
+	"github.com/xenolf/lego/challenge/dns01"
 	"github.com/xenolf/lego/providers/dns/acmedns"
 	"github.com/xenolf/lego/providers/dns/alidns"
 	"github.com/xenolf/lego/providers/dns/auroradns"
@@ -53,9 +54,8 @@ import (
 	"github.com/xenolf/lego/providers/dns/vultr"
 )
 
-// FIXME rename
 // NewDNSChallengeProviderByName Factory for DNS providers
-func NewDNSChallengeProviderByName(name string) (acme.ChallengeProvider, error) {
+func NewDNSChallengeProviderByName(name string) (challenge.Provider, error) {
 	switch name {
 	case "acme-dns":
 		return acmedns.NewDNSProvider()
@@ -116,7 +116,7 @@ func NewDNSChallengeProviderByName(name string) (acme.ChallengeProvider, error) 
 	case "linodev4":
 		return linodev4.NewDNSProvider()
 	case "manual":
-		return acme.NewDNSProviderManual()
+		return dns01.NewDNSProviderManual()
 	case "mydnsjp":
 		return mydnsjp.NewDNSProvider()
 	case "namecheap":
