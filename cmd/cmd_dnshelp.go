@@ -75,6 +75,7 @@ Here is an example bash command using the CloudFlare DNS provider:
 	fmt.Fprintln(w, "\tsakuracloud:\tSAKURACLOUD_ACCESS_TOKEN, SAKURACLOUD_ACCESS_TOKEN_SECRET")
 	fmt.Fprintln(w, "\tselectel:\tSELECTEL_API_TOKEN")
 	fmt.Fprintln(w, "\tstackpath:\tSTACKPATH_CLIENT_ID, STACKPATH_CLIENT_SECRET, STACKPATH_STACK_ID")
+	fmt.Fprintln(w, "\ttransip:\tSTACKPATH_CLIENT_ID, STACKPATH_CLIENT_SECRET, STACKPATH_STACK_ID")
 	fmt.Fprintln(w, "\tvegadns:\tSECRET_VEGADNS_KEY, SECRET_VEGADNS_SECRET, VEGADNS_URL")
 	fmt.Fprintln(w, "\tvultr:\tVULTR_API_KEY")
 	fmt.Fprintln(w)
